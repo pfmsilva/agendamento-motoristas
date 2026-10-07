@@ -1,0 +1,3 @@
+ALTER TABLE public.schedule_releases ADD COLUMN administrator_id uuid REFERENCES public.administrators(id) ON DELETE SET NULL;
+COMMENT ON COLUMN public.schedule_releases.administrator_id IS 'Administrador que liberta o horário (decisão de gestão). driver_id é apenas o motorista do serviço, a quem a libertação se aplica.';
+UPDATE public.schedule_releases r SET administrator_id = a.administrator_id FROM public.activities a WHERE a.id = r.activity_id AND r.administrator_id IS NULL;

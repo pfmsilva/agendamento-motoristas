@@ -1,0 +1,12 @@
+REVOKE EXECUTE ON FUNCTION public.assistant_assigned_driver(uuid) FROM PUBLIC, anon;
+REVOKE EXECUTE ON FUNCTION public.assistant_delegated_driver(uuid, boolean) FROM PUBLIC, anon;
+REVOKE EXECUTE ON FUNCTION public.assistant_manages_driver_full(uuid) FROM PUBLIC, anon;
+REVOKE EXECUTE ON FUNCTION public.can_view_driver_details(uuid) FROM PUBLIC, anon;
+REVOKE EXECUTE ON FUNCTION public.compute_activity_occupation() FROM PUBLIC;
+REVOKE EXECUTE ON FUNCTION public.activities_driver_adjust_guard() FROM PUBLIC;
+REVOKE EXECUTE ON FUNCTION public.delegations_after() FROM PUBLIC;
+REVOKE EXECUTE ON FUNCTION public.delegations_before() FROM PUBLIC;
+GRANT EXECUTE ON FUNCTION public.assistant_assigned_driver(uuid) TO authenticated;
+GRANT EXECUTE ON FUNCTION public.assistant_delegated_driver(uuid, boolean) TO authenticated;
+GRANT EXECUTE ON FUNCTION public.assistant_manages_driver_full(uuid) TO authenticated;
+GRANT EXECUTE ON FUNCTION public.can_view_driver_details(uuid) TO authenticated;

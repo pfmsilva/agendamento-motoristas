@@ -1,0 +1,296 @@
+@import "tailwindcss" source(none);
+@source "../src";
+@import "tw-animate-css";
+
+@custom-variant dark (&:is(.dark *));
+
+@theme inline {
+  /* Typography: Open Sans for UI, Stella (brand display) for headings.
+     Stella font files are not bundled; add @font-face for "Stella" and it is
+     picked up automatically everywhere --font-display is used. */
+  --font-sans: "Open Sans", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Stella", "Open Sans", ui-sans-serif, system-ui, sans-serif;
+
+  --radius-sm: calc(var(--radius) - 2px);
+  --radius-md: var(--radius);
+  --radius-lg: calc(var(--radius) + 2px);
+  --radius-xl: calc(var(--radius) + 4px);
+  --radius-2xl: calc(var(--radius) + 8px);
+
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --color-surface: var(--surface);
+  --color-surface-2: var(--surface-2);
+  --color-brand: var(--brand);
+  --color-brand-foreground: var(--brand-foreground);
+  --color-brand-soft: var(--brand-soft);
+  --color-brand-dark: var(--brand-dark);
+  --color-blue-strong: var(--blue-strong);
+  --color-blue-viz: var(--blue-viz);
+  --color-blue-support: var(--blue-support);
+  --color-blue-light: var(--blue-light);
+  --color-blue-pale: var(--blue-pale);
+  --color-grid-divider: var(--grid-divider);
+  --color-available: var(--available);
+  --color-available-soft: var(--available-soft);
+  --color-busy: var(--busy);
+  --color-busy-soft: var(--busy-soft);
+  --color-leave: var(--leave);
+  --color-leave-soft: var(--leave-soft);
+  --color-warning: var(--warning);
+  --color-warning-soft: var(--warning-soft);
+  --color-unavailable: var(--unavailable);
+  --color-unavailable-soft: var(--unavailable-soft);
+  --color-conflict: var(--conflict);
+  --color-conflict-soft: var(--conflict-soft);
+  --color-occ-service: var(--occ-service);
+  --color-occ-service-foreground: var(--occ-service-foreground);
+  --color-occ-travel: var(--occ-travel);
+  --color-occ-travel-foreground: var(--occ-travel-foreground);
+  --color-occ-adjust: var(--occ-adjust);
+  --color-occ-adjust-foreground: var(--occ-adjust-foreground);
+  --color-occ-border: var(--occ-border);
+  --color-sidebar: var(--sidebar);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-ring: var(--sidebar-ring);
+
+  /* Data visualisation palette */
+  --color-chart-1: var(--chart-1);
+  --color-chart-2: var(--chart-2);
+  --color-chart-3: var(--chart-3);
+  --color-chart-4: var(--chart-4);
+  --color-chart-5: var(--chart-5);
+  --color-chart-6: var(--chart-6);
+  --color-chart-7: var(--chart-7);
+  --color-chart-8: var(--chart-8);
+  --color-chart-9: var(--chart-9);
+  --color-chart-10: var(--chart-10);
+  --color-chart-11: var(--chart-11);
+  --color-chart-12: var(--chart-12);
+
+  --shadow-panel: 0 1px 2px rgb(0 0 0 / 0.04);
+  --shadow-raised: 0 1px 2px rgb(0 0 0 / 0.04), 0 8px 20px rgb(0 0 0 / 0.05);
+}
+
+:root {
+  --radius: 0.375rem;
+
+  /* Surfaces: cool near-white page, white content surfaces */
+  --background: #f7f8f9;
+  --foreground: #14181b;
+  --surface: #ffffff;
+  --surface-2: #f1f4f6;
+  --card: #ffffff;
+  --card-foreground: #14181b;
+  --popover: #ffffff;
+  --popover-foreground: #14181b;
+
+  /* Primary interaction: brand blue. Gold kept as accent only. */
+  --primary: #023f5a;
+  --primary-foreground: #ffffff;
+  --blue-strong: #002c44;
+  --blue-viz: #00467a;
+  --blue-support: #416f84;
+  --blue-light: #819fad;
+  --blue-pale: #c0cfd6;
+
+  --brand: #9b7d40;
+  --brand-foreground: #ffffff;
+  --brand-soft: #e2d8c8;
+  --brand-dark: #826938;
+  --accent: #9b7d40;
+  --accent-foreground: #ffffff;
+
+  --secondary: #eef1f4;
+  --secondary-foreground: #14181b;
+  --muted: #f1f4f6;
+  --muted-foreground: #5b5b5b;
+
+  --destructive: #9e2d33;
+  --destructive-foreground: #ffffff;
+
+  --border: #e2e6ea;
+  --grid-divider: #c4cdd3;
+  --input: #d7dde2;
+  --ring: #023f5a;
+
+  /* Semantic states */
+  --available: #3b6243;
+  --available-soft: #eaf0eb;
+  --busy: #023f5a;
+  --busy-soft: #e7eef2;
+  --leave: #b66113;
+  --leave-soft: #fbeee1;
+  --warning: #8a5a00;
+  --warning-soft: #fdf3d6;
+  --unavailable: #5b5b5b;
+  --unavailable-soft: #eff1f3;
+  --conflict: #9e2d33;
+  --conflict-soft: #f7e8e9;
+
+  /* Occupation hierarchy - one blue family, increasing transparency */
+  --occ-service: #023f5a;
+  --occ-service-foreground: #ffffff;
+  --occ-travel: #819fad;
+  --occ-travel-foreground: #0d2733;
+  --occ-adjust: #d9e4e9;
+  --occ-adjust-foreground: #23414d;
+  --occ-border: #416f84;
+
+  /* Driver identity palette - 12 tons distintos, todos legíveis com texto branco */
+  --driver-1: #023f5a; /* azul-marinho profundo */
+  --driver-2: #1f8f9e; /* turquesa */
+  --driver-3: #4664c8; /* azul médio */
+  --driver-4: #1f7a52; /* verde floresta */
+  --driver-5: #7a4b9c; /* violeta */
+  --driver-6: #c2542f; /* terracota */
+  --driver-7: #9b7d40; /* ocre */
+  --driver-8: #6f9bc4; /* azul-céu suave */
+  --driver-9: #a63d62; /* ameixa */
+  --driver-10: #b5787f; /* rosa envelhecido */
+  --driver-11: #6b7a24; /* azeitona */
+  --driver-12: #46596b; /* cinza-ardósia */
+
+  /* Tipo de evento nas Análises - significado fixo em todos os gráficos */
+  --kind-administration: #4F6D7A; /* azul-cinzento */
+  --kind-garage: #AD6F5A; /* terracota suave */
+
+  /* Serviços ainda sem motorista (atribuição pendente) - dourado da marca, para destacar sem alarmar */
+  --pending-lane: #9b7d40;
+
+  /* Navigation: light minimal sidebar with blue active state */
+  --sidebar: #ffffff;
+  --sidebar-foreground: #14181b;
+  --sidebar-primary: #023f5a;
+  --sidebar-primary-foreground: #ffffff;
+  --sidebar-accent: #e7eef2;
+  --sidebar-accent-foreground: #023f5a;
+  --sidebar-border: #e2e6ea;
+  --sidebar-ring: #023f5a;
+
+  /* Data visualisation */
+  --chart-1: #00467a;
+  --chart-2: #f2c851;
+  --chart-3: #4986bf;
+  --chart-4: #f58232;
+  --chart-5: #14aaa0;
+  --chart-6: #a5198c;
+  --chart-7: #a0d22d;
+  --chart-8: #5a28a0;
+  --chart-9: #9b7d40;
+  --chart-10: #ed1a3b;
+  --chart-11: #898989;
+  --chart-12: #c9c9c9;
+}
+
+
+.dark {
+  --background: #0e1417;
+  --foreground: #eef2f4;
+  --surface: #151d21;
+  --surface-2: #1b2529;
+  --card: #151d21;
+  --card-foreground: #eef2f4;
+  --popover: #151d21;
+  --popover-foreground: #eef2f4;
+  --primary: #819fad;
+  --primary-foreground: #0e1417;
+  --blue-strong: #002c44;
+  --blue-viz: #4986bf;
+  --blue-support: #416f84;
+  --blue-light: #819fad;
+  --blue-pale: #c0cfd6;
+  --brand: #c9b895;
+  --brand-foreground: #14181b;
+  --brand-soft: #33302a;
+  --brand-dark: #b29866;
+  --accent: #c9b895;
+  --accent-foreground: #14181b;
+  --secondary: #1e282c;
+  --secondary-foreground: #eef2f4;
+  --muted: #1e282c;
+  --muted-foreground: #a4b0b6;
+  --destructive: #b76266;
+  --destructive-foreground: #14181b;
+  --border: rgb(255 255 255 / 12%);
+  --input: rgb(255 255 255 / 16%);
+  --ring: #819fad;
+  --available: #9db1a1;
+  --available-soft: #22302a;
+  --busy: #819fad;
+  --busy-soft: #1a2830;
+  --leave: #e69955;
+  --leave-soft: #2f2519;
+  --warning: #e8b45a;
+  --warning-soft: #322817;
+  --unavailable: #a4b0b6;
+  --unavailable-soft: #232b2e;
+  --conflict: #cf9699;
+  --conflict-soft: #31201f;
+  --occ-service: #4d90ad;
+  --occ-service-foreground: #06181f;
+  --occ-travel: #2f5568;
+  --occ-travel-foreground: #dbe8ee;
+  --occ-adjust: #1e333d;
+  --occ-adjust-foreground: #b9cdd6;
+  --occ-border: #5b8598;
+  --sidebar: #151d21;
+  --sidebar-foreground: #eef2f4;
+  --sidebar-primary: #819fad;
+  --sidebar-primary-foreground: #0e1417;
+  --sidebar-accent: #1e2c33;
+  --sidebar-accent-foreground: #c0cfd6;
+  --sidebar-border: rgb(255 255 255 / 12%);
+  --sidebar-ring: #819fad;
+}
+
+@layer base {
+  * {
+    border-color: var(--color-border);
+  }
+
+  body {
+    background-color: var(--color-background);
+    color: var(--color-foreground);
+    font-family: var(--font-sans);
+    -webkit-font-smoothing: antialiased;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4 {
+    font-family: var(--font-display);
+    letter-spacing: -0.01em;
+    color: var(--color-foreground);
+  }
+}
+
+@utility panel {
+  background-color: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-panel);
+}

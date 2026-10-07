@@ -1,0 +1,10 @@
+CREATE INDEX IF NOT EXISTS activities_start_end_idx ON public.activities USING btree (start_datetime, end_datetime);
+CREATE INDEX IF NOT EXISTS activities_admin_start_idx ON public.activities USING btree (administrator_id, start_datetime);
+CREATE INDEX IF NOT EXISTS activities_status_start_idx ON public.activities USING btree (status, start_datetime);
+CREATE INDEX IF NOT EXISTS activities_eff_range_idx ON public.activities USING btree (effective_start, effective_end);
+CREATE INDEX IF NOT EXISTS activity_series_active_idx ON public.activity_series USING btree (active, first_start) WHERE active;
+CREATE INDEX IF NOT EXISTS activity_series_admin_idx ON public.activity_series USING btree (administrator_id);
+CREATE INDEX IF NOT EXISTS schedule_releases_time_idx ON public.schedule_releases USING btree (start_datetime, end_datetime);
+CREATE INDEX IF NOT EXISTS time_off_driver_dates_idx ON public.time_off USING btree (driver_id, start_date, end_date);
+CREATE INDEX IF NOT EXISTS unavailability_driver_time_idx ON public.unavailability USING btree (driver_id, start_datetime, end_datetime);
+CREATE INDEX IF NOT EXISTS notifications_user_created_idx ON public.notifications USING btree (user_id, read, created_at DESC);

@@ -1,0 +1,1 @@
+ALTER TYPE public.recurrence_freq ADD VALUE IF NOT EXISTS 'daily' BEFORE 'weekly';

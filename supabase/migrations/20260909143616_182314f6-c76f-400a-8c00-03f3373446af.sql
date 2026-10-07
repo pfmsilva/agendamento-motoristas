@@ -1,0 +1,1 @@
+REVOKE ALL ON FUNCTION public.create_garage_event(uuid, text, timestamptz, timestamptz, text, boolean) FROM PUBLIC, anon, authenticated;

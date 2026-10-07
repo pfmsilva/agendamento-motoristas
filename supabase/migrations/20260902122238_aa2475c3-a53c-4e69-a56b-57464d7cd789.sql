@@ -1,0 +1,1 @@
+DELETE FROM public.activities WHERE title IN ('Teste QA2','QA transicao','QA modal 23903a4','Teste automático');

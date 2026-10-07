@@ -1,0 +1,1 @@
+REVOKE ALL ON FUNCTION public.audit_row_changes() FROM PUBLIC, anon, authenticated;

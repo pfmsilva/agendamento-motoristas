@@ -1,0 +1,1 @@
+REVOKE ALL ON FUNCTION public.cities_sync_travel() FROM PUBLIC, anon, authenticated;

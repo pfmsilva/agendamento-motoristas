@@ -1,0 +1,10 @@
+DELETE FROM public.activities;
+DELETE FROM public.activity_series;
+DELETE FROM public.time_off;
+DELETE FROM public.unavailability;
+DELETE FROM public.assistant_delegations;
+DELETE FROM public.notifications;
+DELETE FROM public.audit_log;
+DELETE FROM public.administrator_driver_priorities p WHERE p.driver_id IN (SELECT id FROM public.drivers WHERE name = 'PC' AND user_id IS NULL);
+DELETE FROM public.assistant_driver_assignments a WHERE a.driver_id IN (SELECT id FROM public.drivers WHERE name = 'PC' AND user_id IS NULL);
+DELETE FROM public.drivers WHERE name = 'PC' AND user_id IS NULL;

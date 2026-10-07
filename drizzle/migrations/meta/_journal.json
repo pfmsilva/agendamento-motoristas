@@ -1,0 +1,244 @@
+{
+  "version": "7",
+  "dialect": "postgresql",
+  "entries": [
+    {
+      "idx": 0,
+      "version": "7",
+      "when": 1789655050310,
+      "tag": "0000_route_based_travel_times",
+      "breakpoints": true
+    },
+    {
+      "idx": 1,
+      "version": "7",
+      "when": 1789655295058,
+      "tag": "0001_notify_missing_travel_route",
+      "breakpoints": true
+    },
+    {
+      "idx": 2,
+      "version": "7",
+      "when": 1789655987208,
+      "tag": "0002_configurable_event_kinds",
+      "breakpoints": true
+    },
+    {
+      "idx": 3,
+      "version": "7",
+      "when": 1789746376708,
+      "tag": "0003_travel_routes_c_collation_key_order",
+      "breakpoints": true
+    },
+    {
+      "idx": 4,
+      "version": "7",
+      "when": 1789746932376,
+      "tag": "0004_delegation_acceptance_lifecycle",
+      "breakpoints": true
+    },
+    {
+      "idx": 5,
+      "version": "7",
+      "when": 1789991185785,
+      "tag": "0005_loan_vehicles_module",
+      "breakpoints": true
+    },
+    {
+      "idx": 6,
+      "version": "7",
+      "when": 1790000545069,
+      "tag": "0006_separate_service_create_edit_permissions",
+      "breakpoints": true
+    },
+    {
+      "idx": 7,
+      "version": "7",
+      "when": 1790001259290,
+      "tag": "0007_adjustment_timestamp_always_recorded",
+      "breakpoints": true
+    },
+    {
+      "idx": 8,
+      "version": "7",
+      "when": 1790069484797,
+      "tag": "0008_loan_vehicle_permanent_allocations",
+      "breakpoints": true
+    },
+    {
+      "idx": 9,
+      "version": "7",
+      "when": 1790069664520,
+      "tag": "0009_allow_inspections_when_ending_permanent_allocations",
+      "breakpoints": true
+    },
+    {
+      "idx": 10,
+      "version": "7",
+      "when": 1790070466704,
+      "tag": "0010_fix_loan_overlap_ambiguous_old_alias",
+      "breakpoints": true
+    },
+    {
+      "idx": 11,
+      "version": "7",
+      "when": 1790071007814,
+      "tag": "0011_allow_temporary_events_within_permanent_allocations",
+      "breakpoints": true
+    },
+    {
+      "idx": 12,
+      "version": "7",
+      "when": 1790071096308,
+      "tag": "0012_preserve_permanent_end_with_temporary_events",
+      "breakpoints": true
+    },
+    {
+      "idx": 13,
+      "version": "7",
+      "when": 1790071147465,
+      "tag": "0013_safe_temporary_overlap_trigger_for_insert_and_update",
+      "breakpoints": true
+    },
+    {
+      "idx": 14,
+      "version": "7",
+      "when": 1790078554505,
+      "tag": "0014_event_approval_and_city_requests",
+      "breakpoints": true
+    },
+    {
+      "idx": 15,
+      "version": "7",
+      "when": 1790078605331,
+      "tag": "0015_approval_by_tag_too",
+      "breakpoints": true
+    },
+    {
+      "idx": 16,
+      "version": "7",
+      "when": 1790086326826,
+      "tag": "0016_email_outbox_driver_assignment",
+      "breakpoints": true
+    },
+    {
+      "idx": 17,
+      "version": "7",
+      "when": 1790088826601,
+      "tag": "0017_occupation_adjustment_approval",
+      "breakpoints": true
+    },
+    {
+      "idx": 18,
+      "version": "7",
+      "when": 1790155469111,
+      "tag": "0018_preserve_config_history_on_delete",
+      "breakpoints": true
+    },
+    {
+      "idx": 19,
+      "version": "7",
+      "when": 1790156192002,
+      "tag": "0019_profiles_manager_update",
+      "breakpoints": true
+    },
+    {
+      "idx": 20,
+      "version": "7",
+      "when": 1790260665901,
+      "tag": "0020_configurable_loan_vehicle_event_types",
+      "breakpoints": true
+    },
+    {
+      "idx": 21,
+      "version": "7",
+      "when": 1790260702245,
+      "tag": "0021_loan_vehicle_event_type_overlap_rules",
+      "breakpoints": true
+    },
+    {
+      "idx": 22,
+      "version": "7",
+      "when": 1790701521829,
+      "tag": "0022_profiles_email_not_blank",
+      "breakpoints": true
+    },
+    {
+      "idx": 23,
+      "version": "7",
+      "when": 1790702891706,
+      "tag": "0023_schedule_releases_and_manager_permissions",
+      "breakpoints": true
+    },
+    {
+      "idx": 24,
+      "version": "7",
+      "when": 1790702949996,
+      "tag": "0024_manager_owner_adjustments_auto_approved",
+      "breakpoints": true
+    },
+    {
+      "idx": 25,
+      "version": "7",
+      "when": 1790704888303,
+      "tag": "0025_schedule_releases_true_negative_allocation",
+      "breakpoints": true
+    },
+    {
+      "idx": 26,
+      "version": "7",
+      "when": 1790775053609,
+      "tag": "0026_analytics_occupancy_excludes_releases",
+      "breakpoints": true
+    },
+    {
+      "idx": 27,
+      "version": "7",
+      "when": 1790937448539,
+      "tag": "0027_release_schedule_scope",
+      "breakpoints": true
+    },
+    {
+      "idx": 28,
+      "version": "7",
+      "when": 1790953464333,
+      "tag": "0028_releases_belong_to_activity",
+      "breakpoints": true
+    },
+    {
+      "idx": 29,
+      "version": "7",
+      "when": 1790954158398,
+      "tag": "0029_release_administrator",
+      "breakpoints": true
+    },
+    {
+      "idx": 30,
+      "version": "7",
+      "when": 1790954830510,
+      "tag": "0030_admin_own_schedule_release",
+      "breakpoints": true
+    },
+    {
+      "idx": 31,
+      "version": "7",
+      "when": 1790955717751,
+      "tag": "0031_release_scopes_admin_driver_assistant",
+      "breakpoints": true
+    },
+    {
+      "idx": 32,
+      "version": "7",
+      "when": 1791300773375,
+      "tag": "0032_recurring_series_on_demand",
+      "breakpoints": true
+    },
+    {
+      "idx": 33,
+      "version": "7",
+      "when": 1791364153473,
+      "tag": "0033_calendar_performance_indexes",
+      "breakpoints": true
+    }
+  ]
+}

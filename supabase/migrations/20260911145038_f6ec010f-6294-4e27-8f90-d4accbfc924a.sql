@@ -1,0 +1,10 @@
+REVOKE ALL ON FUNCTION public.create_service_auto(uuid,text,activity_type,uuid,timestamptz,timestamptz,text,uuid,uuid) FROM PUBLIC, anon;
+GRANT EXECUTE ON FUNCTION public.create_service_auto(uuid,text,activity_type,uuid,timestamptz,timestamptz,text,uuid,uuid) TO authenticated;
+REVOKE ALL ON FUNCTION public.update_service_auto(uuid,text,activity_type,uuid,timestamptz,timestamptz,text,timestamptz,uuid,uuid) FROM PUBLIC, anon;
+GRANT EXECUTE ON FUNCTION public.update_service_auto(uuid,text,activity_type,uuid,timestamptz,timestamptz,text,timestamptz,uuid,uuid) TO authenticated;
+REVOKE ALL ON FUNCTION public.create_service_series(uuid,text,activity_type,uuid,timestamptz,timestamptz,text,recurrence_freq,date,uuid,uuid) FROM PUBLIC, anon;
+GRANT EXECUTE ON FUNCTION public.create_service_series(uuid,text,activity_type,uuid,timestamptz,timestamptz,text,recurrence_freq,date,uuid,uuid) TO authenticated;
+REVOKE ALL ON FUNCTION public.update_service_series(uuid,text,text,activity_type,uuid,time,integer,text,uuid,uuid) FROM PUBLIC, anon;
+GRANT EXECUTE ON FUNCTION public.update_service_series(uuid,text,text,activity_type,uuid,time,integer,text,uuid,uuid) TO authenticated;
+REVOKE ALL ON FUNCTION public.create_driver_service(uuid,text,activity_type,timestamptz,timestamptz,text,uuid,uuid,uuid) FROM PUBLIC, anon;
+GRANT EXECUTE ON FUNCTION public.create_driver_service(uuid,text,activity_type,timestamptz,timestamptz,text,uuid,uuid,uuid) TO authenticated;
